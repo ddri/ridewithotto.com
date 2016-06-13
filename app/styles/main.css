@@ -1,0 +1,578 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+Note: any .css or .scss files included in the 'styles' directory
+will be correctly compiled during `gulp serve` and `gulp`
+ */
+
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+  /*color: white;*/
+}
+
+a {
+
+}
+
+/* Shared
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button {
+  border-radius: 100px;
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  padding: 6rem 0 7rem;
+  text-align: center;
+  position: relative;
+}
+.section-heading {
+  color: #EC6766;
+  margin-bottom: 1.2rem;
+}
+.section-description {
+  margin-bottom: 1.2rem;
+}
+.section-content {
+  text-align: left;
+  padding: 0rem 6rem;
+}
+
+.section:nth-of-type(3) {
+  box-shadow: none !important;
+}
+
+.section:nth-of-type(4) {
+  z-index: 5;
+  background-color: white;
+  padding-bottom: 0rem !important;
+}
+
+.section:nth-of-type(5) {
+  padding: 14rem 0 0rem !important;
+}
+
+.steps {
+  box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.section-count {
+  position: relative;
+}
+
+.section-count > h4 {
+  position: absolute;
+  left: 0;
+  top: calc(50% - 2rem);
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+/* Header
+-------------------------------------------------- */
+.header--tagline {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.button-otto {
+  color: white;
+  font-weight: 400;
+  height: 5rem;
+  line-height: 5rem;
+  border-color: #EC6766;
+  background-color: #EC6766;
+}
+
+/* Hero
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.banner-heading {
+  color: white;
+}
+.banner-description {
+  color: white;
+}
+.banner-cta {
+  text-align: center;
+}
+.hero {
+  background-image: url('../images/twins-girls-wagon-family-two-cute-siblings.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat:  no-repeat;
+}
+
+/* Explainer
+-------------------------------------------------- */
+.explainer {
+  background-color: #F8B71C;
+  color: white;
+}
+
+.explainer-section {
+  padding: 6rem 6rem 7rem;
+  text-align: center;
+}
+
+.curved-offset {
+  position: relative;
+  bottom: -7rem;
+}
+
+.yellow-curved {
+  margin-bottom: -27px;
+}
+
+/* Map
+-------------------------------------------------- */
+.map-wrapper {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+/* Form
+-------------------------------------------------- */
+.form-wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  top: 0;
+  left: 0;
+  padding-bottom: 6rem;
+}
+
+.form-container {
+  background-color: white;
+  margin: 1rem;
+  z-index: 6;
+}
+
+input[type="datetime-local"], input[type="date"], input[type="time"] {
+  height: 38px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.form {
+  margin-bottom: 0 !important;
+}
+
+.form-contents {
+  padding: 1rem 1rem 0rem 1rem;
+}
+
+.form-contents__success {
+  padding: 3rem;
+  text-align: center;
+}
+
+.form--input__success {
+  border-radius: 100px !important;
+}
+
+.form--submit-button {
+  height: 48px !important;
+  padding: 0 !important;
+  margin-bottom: 0;
+  border-radius: 0px !important;
+  color: white !important;
+  border-color: #EC6766 !important;
+  background-color: #EC6766 !important;
+}
+
+.form--success-button {
+  /* height: 48px !important; */
+  padding: 0 !important;
+  margin-bottom: 0;
+  color: white !important;
+  border-color: #EC6766 !important;
+  background-color: #EC6766 !important;
+  border-radius: 100px !important;
+}
+
+.form-success-text {
+  color: #EC6766;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+}
+
+/* Images
+--------------------------------------------------- */
+.image-center {
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+}
+
+.image-scale {
+  max-width: 99%;
+  height: auto;
+}
+
+/* Phones
+-------------------------------------------------- */
+.phones {
+  position: relative;
+}
+.phone {
+  position: relative;
+  max-width: 80%;
+  margin: 3rem auto -20rem;
+}
+
+/* Rover
+-------------------------------------------------- */
+.rover {
+  padding: 0rem 2rem;
+}
+
+/* Group
+-------------------------------------------------- */
+.group {
+  margin-bottom: -15rem;
+}
+
+/* Footer
+-------------------------------------------------- */
+footer {
+  position: absolute;
+  bottom: 0;
+  background: white;
+  padding: 2rem;
+  height: 6rem;
+  display:flex;
+  align-items:center;
+}
+
+.footer--tagline {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+/* Vertical Steps
+-------------------------------------------------- */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.step {
+  position: relative;
+  min-height: 1.5rem /* circle-size */;
+}
+
+.step > div:first-child {
+  position: static;
+  height: 0;
+}
+
+.step > .begin-stepper {
+  margin-top: 1rem;
+}
+
+.step > div:last-child {
+  margin-left: 1.5rem;
+  padding-left: 0.75rem;
+}
+
+.circle {
+  background: #EC6766;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  border-radius: 0.75rem;
+  position: relative;
+  color: white;
+  text-align: center;
+  top: 3.75rem;
+}
+
+.circle-hollow {
+  border: 2px solid #EC6766;
+  border-radius: 50%;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+
+  position: relative;
+  -webkit-box-shadow: 0 0 1px 0px rgb( 255, 255, 255);
+  box-shadow: 0 0 1px 0px rgb( 255, 255, 255);
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 3.75rem;
+}
+
+.line {
+  position: absolute;
+  border-left: 1px solid gainsboro;
+  left: 0.75rem;
+  top: 5.4rem;
+  bottom: -4rem;
+}
+
+.step:last-child .line {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  .map-wrapper {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+/* Older Mobiles */
+@media (min-width: 300px) {
+  header {
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+  }
+
+  .header--cta {
+    margin: 0rem 1rem;
+    color: #EC6766 !important;
+  }
+
+  .phone + .phone {
+    display: none;
+  }
+
+
+
+  /* Skeleton has no support for mobile portrait, had to override */
+  .container {
+    width: 100%; }
+  .column,
+  .columns {
+    margin-left: 4%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  /*.one-half.column                { width: 48%; }*/
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
+}
+
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  /*.section {*/
+    /*padding: 12rem 0 11rem;*/
+  /*}*/
+  .hero {
+    padding-bottom: 12rem;
+    text-align: left;
+    /*height: 165px;*/
+  }
+  .phone {
+    /*top: -7rem;*/
+    right: 4rem;
+    bottom: 0rem;
+    max-height: 362px;
+    z-index: 3;
+  }
+  .phone + .phone {
+    position: absolute;
+    /*top: 3rem;*/
+    display: block;
+    max-width: 73.8%;
+    /* right: -25rem; */
+    z-index: 2;
+    max-height: 338px;
+  }
+  .hero-heading {
+    font-size: 2.4rem;
+  }
+
+  /*#map {*/
+    /*height: 100vh;*/
+    /*width: 100vw;*/
+  /*}*/
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+
+  header {
+    padding: 2rem;
+  }
+
+  .header--cta {
+    margin: 0rem 3rem;
+  }
+
+  /*.hero {*/
+  /*!*height: 190px;*!*/
+  /*}*/
+  .hero-heading {
+    font-size: 2.6rem;
+  }
+  .section {
+    padding: 14rem 0 15rem;
+  }
+  /*.section:nth-of-type(3) {*/
+  /*padding: 6rem 0 43rem;*/
+  /*}*/
+  .hero {
+    padding: 16rem 0 14rem;
+  }
+  .section-description {
+    max-width: 80%;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+  }
+  /*.phone {*/
+  /*top: 0rem;*/
+  /*left: 25%;*/
+  /*!*right: 8rem;*!*/
+  /*max-height: 510px;*/
+  /*}*/
+  /*.phone + .phone {*/
+  /*display: block;*/
+  /*position: absolute;*/
+  /*top: 3rem;*/
+  /*max-width: 73.8%;*/
+  /*!*right: 0rem;*!*/
+  /*right: 25%;*/
+  /*z-index: 2;*/
+  /*max-height: 478px;*/
+  /*}*/
+  /*.phone + .phone {*/
+  /*top: 2rem;*/
+  /*max-height: 472px;*/
+  /*}*/
+  /*#map {*/
+    /*height: 100vh;*/
+    /*width: 100vw;*/
+  /*}*/
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+  /*.section {*/
+    /*padding: 20rem 0 19rem;*/
+  /*}*/
+  /*.section:nth-of-type(3) {*/
+    /*padding: 8rem 0 53rem;*/
+  /*}*/
+  .hero {
+    padding: 22rem 0;
+  }
+  .hero-heading {
+    font-size: 3.0rem;
+  }
+  .phone {
+    top: -2rem;
+    max-height: 615px;
+  }
+  .phone + .phone {
+    top: 2rem;
+    right: -30rem;
+    max-height: 570px;
+  }
+  /*.phone {*/
+    /*!*position: absolute;*!*/
+    /*top: -7rem;*/
+    /*right: 3rem;*/
+    /*max-height: 362px;*/
+    /*z-index: 3;*/
+  /*}*/
+  .phone + .phone {
+    /*top: -6rem;*/
+    display: block;
+    max-width: 73.8%;
+    right: 0rem;
+    z-index: 2;
+    /*max-height: 338px;*/
+  }
+}
